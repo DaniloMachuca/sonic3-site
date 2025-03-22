@@ -1,0 +1,27 @@
+@use "variaveis";
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../../assets/fonts/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../../assets/fonts/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Sonic";
+  src: url(../../assets/fonts/NiseSegaSonic.TTF);
+  font-weight: 600;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: variaveis.$cor-fundo;
+}
