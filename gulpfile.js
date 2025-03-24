@@ -5,9 +5,9 @@ const uglify = require("gulp-uglify");
 
 function imagens() {
   return gulp
-    .src("src/imgages/**/*")
+    .src("./src/images/**/*")
     .pipe(imagemin())
-    .pipe(gulp.dest("dist/images"));
+    .pipe(gulp.dest("./dist/images"));
 }
 
 function css() {
