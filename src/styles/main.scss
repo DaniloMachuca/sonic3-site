@@ -1,5 +1,6 @@
 @use "variaveis";
 @use "hero";
+@use "stories";
 
 @font-face {
   font-family: "Poppins";
@@ -55,6 +56,10 @@ body {
   }
 }
 
+.title--big {
+  @include title(48px);
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -74,7 +79,29 @@ body {
   border: 1px solid variaveis.$cor-btn-primary;
 
   &:hover {
-    background-color: transparent;
-    color: variaveis.$cor-btn-primary;
+    background-color: darken($color: variaveis.$cor-btn-primary, $amount: 40%);
+  }
+
+  &:active {
+    background-color: lighten($color: variaveis.$cor-btn-primary, $amount: 1%);
+  }
+
+  &--hero {
+    background-color: variaveis.$cor-btn-secondary;
+    border-color: variaveis.$cor-btn-secondary;
+
+    &:hover {
+      background-color: darken(
+        $color: variaveis.$cor-btn-secondary,
+        $amount: 40%
+      );
+    }
+
+    &:active {
+      background-color: lighten(
+        $color: variaveis.$cor-btn-secondary,
+        $amount: 1%
+      );
+    }
   }
 }

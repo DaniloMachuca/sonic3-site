@@ -1,0 +1,54 @@
+@use "variaveis";
+
+.stories {
+  padding: 5.6vw;
+  display: block;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  &__text-container {
+    position: absolute;
+    top: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: calc(40% - 5.6vw);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .title {
+      font-size: 2.4rem;
+      margin-bottom: 24px;
+    }
+
+    .text {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btn__container {
+    position: absolute;
+    top: 87%;
+    width: calc(40% - 5.6vw + 24px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    .button {
+      margin-right: 24px;
+    }
+  }
+}
+
+.story-select {
+  display: none;
+
+  &--is-active {
+    display: contents;
+  }
+}

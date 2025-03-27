@@ -27,7 +27,7 @@
               <strong>Adaptação de:</strong> Sonic Adventure 2
             </li>
             <li class="text hero__content__info__list__item">
-              <strong>Baseado em:</strong> Sonic the Hedgehog da Sega
+              <strong>Baseado em:</strong> Sonic the H'edgehog da Sega
             </li>
             <li class="text hero__content__info__list__item">
               <strong>Distribuidora:</strong> Paramount Pictures
@@ -42,20 +42,56 @@
         </div>
       </div>
     </section>
-    <section class="elenco">
-      <div>
-        <nav>
-          <ul>
-            <li><a href="#"><img src="https://placehold.co/100x100" alt=""></a></li>
-            <li><a href="#"><img src="https://placehold.co/100x100" alt=""></a></li>
-            <li><a href="#"><img src="https://placehold.co/100x100" alt=""></a></li>
-            <li><a href="#"><img src="https://placehold.co/100x100" alt=""></a></li>
-          </ul>
-        </nav>
-        <div>
-
+    <section class="stories">
+      <div data-story-id="hero" class="story-select">
+        <picture>
+          <img
+            class="sotries__background"
+            src="../dist/images/sonic_background.jpg"
+            alt="stories"
+          />
+        </picture>
+        <div class="stories__text-container">
+          <h2 class="text">Personagem no jogo adaptado:</h2>
+          <h2 class="title">Sonic the Hedgehog</h2>
+          <p class="text">
+            O ouriço mais rápido da Terra tem uma pequena competição. Confundido
+            com um fugitivo, Sonic está sendo perseguido por uma organização
+            militar secreta. Ele terá que alcançar o misterioso ouriço negro
+            para frustrar o mais recente plano do Dr. Eggman de conquistar o
+            mundo.
+          </p>
         </div>
       </div>
+      <div data-story-id="dark" class="story-select story-select--is-active">
+        <picture>
+          <img
+            class="sotries__background"
+            src="../dist/images/shadow_background.png"
+            alt="stories"
+          />
+        </picture>
+        <div class="stories__text-container">
+          <h2 class="text">Personagem no jogo adaptado:</h2>
+          <h2 class="title">Shadow the Hedgehog</h2>
+          <p class="text">
+            O ouriço negro que se assemelha ao Sonic. Shadow é a forma de vida
+            suprema criada pelo Professor Gerald. Ele possui uma habilidade
+            especial chamada "Chaos Control", que lhe permite distorcer o tempo
+            e o espaço usando as Chaos Emeralds. Após contar ao Dr. Eggman sobre
+            a existência do Eclipse Cannon, Shadow o incentiva a se unir a ele
+            para conquistar o mundo.
+          </p>
+        </div>
+      </div>
+      <div class="stories__btn__container">
+        <button data-story-button="hero" class="button button--hero">
+          Hero
+        </button>
+        <button data-story-button="dark" class="button">Dark</button>
+      </div>
     </section>
+
+    <script src="../dist/scripts/js/main.js"></script>
   </body>
 </html>
