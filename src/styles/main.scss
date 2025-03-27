@@ -1,6 +1,7 @@
 @use "variaveis";
 @use "hero";
 @use "stories";
+@use "filmes-anteriores";
 
 @font-face {
   font-family: "Poppins";
@@ -48,6 +49,10 @@ body {
   @include text();
 }
 
+.text--secondary {
+  color: variaveis.$cor-texto-secundario;
+}
+
 .title {
   @include title();
 
@@ -58,6 +63,10 @@ body {
 
 .title--big {
   @include title(48px);
+}
+
+.title--small {
+  @include title(24px);
 }
 
 .button {

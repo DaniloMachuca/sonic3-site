@@ -5,6 +5,11 @@
   display: block;
   position: relative;
 
+  .title--main {
+    text-align: end;
+    margin-bottom: 50px;
+  }
+
   img {
     width: 100%;
   }
@@ -35,20 +40,35 @@
     position: absolute;
     top: 87%;
     width: calc(40% - 5.6vw + 24px);
-    height: 100%;
     display: flex;
     justify-content: center;
 
     .button {
       margin-right: 24px;
+      border-color: black;
+      border-width: 3px;
+
+      &--hero--is-active {
+        background-color: darken(
+          $color: variaveis.$cor-btn-secondary,
+          $amount: 40%
+        );
+      }
+
+      &--dark--is-active {
+        background-color: darken(
+          $color: variaveis.$cor-btn-primary,
+          $amount: 40%
+        );
+      }
     }
   }
-}
 
-.story-select {
-  display: none;
+  .story-select {
+    display: none;
 
-  &--is-active {
-    display: contents;
+    &--is-active {
+      display: contents;
+    }
   }
 }
