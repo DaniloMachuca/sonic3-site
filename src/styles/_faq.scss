@@ -1,0 +1,66 @@
+.arreys {
+  padding: 5.6vw;
+  color: #fff;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    list-style: none;
+
+    &__item {
+      background-color: #13151d;
+      margin-bottom: 16px;
+
+      &__title {
+        color: #fff;
+        font-size: 20px;
+        padding: 24px;
+        display: block;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+          content: "+";
+          position: absolute;
+          top: 0;
+          right: 24px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          font-size: 40px;
+        }
+      }
+
+      &__content {
+        max-height: 0;
+        overflow: auto;
+        padding: 0 24px;
+        transition: all, 0.3s ease-in-out;
+
+        &__list {
+          margin-top: 20px;
+
+          &__item {
+            margin-top: 20px;
+            margin-left: 40px;
+          }
+        }
+      }
+
+      &--is-active {
+        .arreys__list__item__title::after {
+          content: "-";
+        }
+
+        .arreys__list__item__content {
+          max-height: 500px;
+          padding-bottom: 24px;
+          transition: all, 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

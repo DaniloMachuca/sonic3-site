@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll("[data-story-button]");
+  const array = document.querySelectorAll("[data-array-title]");
 
+  //Programação de alternação de abas
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function (botao) {
       const abaAlvo = botao.target.dataset.storyButton;
@@ -14,6 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
         buttons[i].classList.add("button--dark--is-active");
       }
     });
+  }
+
+  //Programação dos arrays
+  for (let i = 0; i < array.length; i++) {
+    array[i].addEventListener("click", toggleArray);
   }
 });
 
@@ -30,4 +37,11 @@ function removeActive() {
     buttons[i].classList.remove("button--hero--is-active");
     buttons[i].classList.remove("button--dark--is-active");
   }
+}
+
+function toggleArray(elemento) {
+  const classe = "arreys__list__item--is-active";
+  const elementoPai = elemento.target.parentNode;
+
+  elementoPai.classList.toggle(classe);
 }
