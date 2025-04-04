@@ -2,6 +2,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll("[data-story-button]");
   const array = document.querySelectorAll("[data-array-title]");
 
+  const heroSection = document.querySelector(".hero");
+  const alturaHero = heroSection.clientHeight;
+
+  //Programação da barra de navegação
+  window.addEventListener("scroll", function () {
+    const posicaoAtual = window.scrollY;
+
+    if (posicaoAtual < alturaHero) {
+      ocultaElementosHeader();
+    } else {
+      exibeElementosHeader();
+    }
+  });
+
   //Programação de alternação de abas
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function (botao) {
@@ -44,4 +58,14 @@ function toggleArray(elemento) {
   const elementoPai = elemento.target.parentNode;
 
   elementoPai.classList.toggle(classe);
+}
+
+function exibeElementosHeader() {
+  const header = document.querySelector("header");
+  header.classList.remove("header--is-hidden");
+}
+
+function ocultaElementosHeader() {
+  const header = document.querySelector("header");
+  header.classList.add("header--is-hidden");
 }
