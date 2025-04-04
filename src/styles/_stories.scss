@@ -26,6 +26,12 @@
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
 
+    @media (max-width: 996px) {
+      display: block;
+      position: inherit;
+      width: 100%;
+    }
+
     .title {
       font-size: 2.4rem;
       margin-bottom: 24px;
@@ -42,6 +48,11 @@
     width: calc(40% - 5.6vw + 24px);
     display: flex;
     justify-content: center;
+
+    @media (max-width: 996px) {
+      position: inherit;
+      width: 100%;
+    }
 
     .button {
       margin-right: 24px;

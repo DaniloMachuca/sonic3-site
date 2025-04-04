@@ -6,8 +6,27 @@
   background-size: cover;
   margin-top: -85px;
 
+  @media (max-width: 768px) {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: none;
+  }
+
   &__content {
     max-width: 640px;
+
+    .img {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      margin-bottom: 24px;
+    }
 
     .title {
       margin-bottom: 24px;
@@ -24,9 +43,9 @@
       }
 
       &__list {
+        list-style: none;
         &__item {
           text-align: left;
-          list-style: circle;
         }
       }
     }
